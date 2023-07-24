@@ -543,7 +543,8 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
                         reevaluateSystemTheme(true /* forceReload */);
                     }
                 },
-                UserHandle.USER_ALL);
+                UserHandle.USER_ALL
+                );
 
         mSecureSettings.registerContentObserverForUser(
                 Settings.Secure.getUriFor(Settings.Secure.QS_BRIGHTNESS_SLIDER_POSITION),
@@ -564,9 +565,10 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
                         reevaluateSystemTheme(true /* forceReload */);
                     }
                 },
-                UserHandle.USER_ALL);
+                UserHandle.USER_ALL
+                );
 
-       mUserTracker.addCallback(mUserTrackerCallback, mMainExecutor);
+        mUserTracker.addCallback(mUserTrackerCallback, mMainExecutor);
 
         mDeviceProvisionedController.addCallback(mDeviceProvisionedListener);
 
